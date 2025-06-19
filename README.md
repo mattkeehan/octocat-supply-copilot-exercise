@@ -65,6 +65,21 @@ Or use the VS Code tasks:
 ## Next Steps
 
 - Complete the [exercise guide](./docs/exercise.md) for detailed instructions on how to use Copilot features
+
+## 🌐 GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages. When you push to the `main` branch, the frontend will be automatically built and deployed.
+
+### Setup GitHub Pages
+1. Go to your repository settings
+2. Navigate to "Pages" in the sidebar
+3. Set the source to "GitHub Actions"
+4. The deployment will happen automatically on the next push to `main`
+
+The deployed application will be available at: `https://[your-username].github.io/octocat-supply-copilot-exercise/`
+
+**Note**: The backend API is not deployed with GitHub Pages (static hosting only). The frontend will show a warning message when running in production mode without an API backend.
+
 ## 📚 Documentation
 
 - [Detailed Architecture](./docs/architecture.md)
