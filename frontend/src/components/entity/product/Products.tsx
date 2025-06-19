@@ -2,19 +2,17 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import { api } from '../../../api/config';
-
-interface Product {
-  productId: number;
-  name: string;
-  description: string;
-  price: number;
-  imgName: string;
-  sku: string;
-  unit: string;
-  supplierId: number;
-}
+import { mockProducts, Product } from '../../../api/mockData';
 
 const fetchProducts = async (): Promise<Product[]> => {
+  // Use mock data when running on GitHub Pages
+  if (import.meta.env.PROD && window.location.hostname.includes('github.io')) {
+    // Simulate async call for consistency with React Query
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(mockProducts), 100);
+    });
+  }
+  
   const { data } = await axios.get(`${api.baseURL}${api.endpoints.products}`);
   return data;
 };
