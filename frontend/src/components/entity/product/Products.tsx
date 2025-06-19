@@ -74,7 +74,7 @@ export default function Products() {
             <div key={product.productId} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(118,184,82,0.3)]">
               <div className="relative">
                 <img 
-                  src={`/${product.imgName}`} 
+                  src={`${import.meta.env.BASE_URL}${product.imgName}`} 
                   alt={product.name}
                   className="w-full h-48 object-cover"
                 />
