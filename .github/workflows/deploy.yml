@@ -39,7 +39,7 @@ jobs:
       - name: Build frontend
         run: npm run build --workspace=frontend
         env:
-          NODE_ENV: production
+          GITHUB_PAGES: true
 
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
