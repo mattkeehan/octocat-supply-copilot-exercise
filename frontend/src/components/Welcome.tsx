@@ -42,7 +42,7 @@ export default function Welcome() {
           {/* Hero Image */}
           <div className="w-7/8">
             <img
-              src="/hero.png"
+              src={`${import.meta.env.BASE_URL}hero.png`}
               alt="Logistics and Supply Chain"
               className="w-full h-auto rounded-lg"
             />
